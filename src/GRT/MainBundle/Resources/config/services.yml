@@ -1,0 +1,7 @@
+parameters:
+#    grt_main.example.class: GRT\MainBundle\Example
+
+services:
+#    grt_main.example:
+#        class: %grt_main.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

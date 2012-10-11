@@ -1,0 +1,39 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+<style>
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 5px;
+    border: 1px solid black;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<h2>GPS History{%if phone%} for {{phone}}{%endif%}</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Updated</th>
+            <th>Latitude</th>
+            <th>Langitude</th>
+            <th>Google Maps</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for location in locations %}
+       <tr>
+           <td>{{location.date|date('Y-m-d H:i:s')}}</td>
+           <td>{{location.latitude}}</td>
+           <td>{{location.longitude}}</td>
+           <td><a href="http://maps.google.com/maps?q={{location.latitude}},{{location.longitude}}">Location</a></td>
+       </tr>
+{% endfor %}
+    </tbody>
+</table>
+{% endblock %}

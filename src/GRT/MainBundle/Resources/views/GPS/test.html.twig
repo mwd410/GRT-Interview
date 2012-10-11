@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+<form action="{{path('gpsNew')}}" method="POST">
+    Phone
+    <input type="text" name="phone">
+    Latitude
+    <input type="text" name="latitude">
+    Longitude
+    <input type="text" name="longitude">
+    Updated
+    <input type="text" name="updated">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

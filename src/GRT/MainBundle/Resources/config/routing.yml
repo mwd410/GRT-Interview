@@ -1,0 +1,11 @@
+gpsIndex:
+    pattern:  /gps/{phone}
+    defaults: { _controller: GRTMainBundle:GPS:index, phone: "" }
+
+gpsNew:
+    pattern:   /newgps
+    defaults: { _controller: GRTMainBundle:GPS:post }
+    
+gpsTest:
+    pattern:  /gpstest
+    defaults: { _controller: GRTMainBundle:GPS:test }
